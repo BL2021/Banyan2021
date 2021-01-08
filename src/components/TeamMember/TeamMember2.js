@@ -9,7 +9,7 @@ const TeamMember2 = (props) => {
 
 
 
-    const [selectedMember, setMember] = useState({});
+    const [selectedMember, setMember] = useState(null);
     const [show, setShow] = useState(false);
 
     const data = useStaticQuery(graphql`
@@ -33,12 +33,12 @@ const TeamMember2 = (props) => {
       }
     }
   `)
-  console.log(data);
           
 
    const learnMore = (member) => {
     setMember(member)
     console.log(selectedMember);
+    return selectedMember;
   }
 
   const handleClose = () =>  {

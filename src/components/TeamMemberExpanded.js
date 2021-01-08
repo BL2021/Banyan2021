@@ -3,7 +3,7 @@ import { Image, Modal } from "react-bootstrap";
 
 export default function TeamMemberExpanded(props) {
   if (props.member !== null) {
- 
+ console.log("MEMBER" + props.member)
     return (
       <>
         <Modal show={props.show} onHide={props.onClose}>
