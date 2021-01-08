@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row, Container } from "react-bootstrap";
 import TeamMember from "../components/TeamMember/TeamMember";
-import { TEAMMEMBERS } from "./teamMembers";
+import { TEAMMEMBERS } from "../data/teamMembers";
 import ReactGA from 'react-ga'
 import HeaderNav from "../components/HeaderNav";
 export default class Team extends Component {
