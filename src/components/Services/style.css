@@ -1,0 +1,22 @@
+#service-card {
+  background-color: #f8f9fa !important;
+  font-weight: bold;
+  color: rgb(221, 198, 198);
+  text-shadow: black 2px 1px;
+}
+
+.col-md-5 {
+  text-shadow: rgb(124, 23, 23) 1.5px 1.5px !important;
+}
+
+.breadcrumb-item,
+.breadcrumb-item a {
+  text-shadow: 2px 2px slateblue !important;
+  color: snow !important;
+}
+
+.max-hw {
+  width: 100%;
+  max-width: 1000px !important;
+  max-height: 700px;
+}

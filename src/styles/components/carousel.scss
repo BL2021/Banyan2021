@@ -1,0 +1,14 @@
+
+.carousel-img{
+    @include widthHeight(0px, 650px);
+}
+
+.car-wid{
+    max-width: 1200px;
+    margin-top: 70px;
+}
+
+.bg-blend{
+    width:100vw !important;
+    height:auto !important; 
+}

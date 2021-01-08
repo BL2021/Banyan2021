@@ -1,0 +1,71 @@
+$primary-color-one: #187c6d;
+$primary-color-two: #96dcd2;
+$secondary-color-one: #ff977e;
+$secondary-color-two: #a03116;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap');
+
+*{
+    font-family: lato !important;
+}
+
+.header-size{
+    font-size: 30px!important;
+}
+
+.header-size-2{
+    font-size: 34px!important;
+}
+
+.n-p{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+
+.team-bg{
+    background-color: #24234d;
+    color:white;
+}
+
+.prim-txt{
+    color:#494d83!important;
+}
+
+.sec-txt{
+    color: #1b723f!important;
+}
+
+@mixin widthHeight($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.logo {
+    @include widthHeight(180px, 45px);
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.max-w {
+    max-width: 1400px;
+}
+
+.med-pic{
+    max-width: 750px;
+    max-height: auto;
+}
+.fig-cap{
+font-weight: 300 !important;
+}
+.iconH:hover{
+    color: #1b723f !important;
+}
+
+.wordH:hover{
+    color: #494d83!important;
+}
+
+.z1{
+    overflow-x: hidden;
+}
