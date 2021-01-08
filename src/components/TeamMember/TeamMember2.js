@@ -38,6 +38,7 @@ const TeamMember2 = (props) => {
 
    const learnMore = (member) => {
     setMember(member)
+    console.log(selectedMember);
   }
 
   const handleClose = () =>  {
@@ -46,7 +47,7 @@ const TeamMember2 = (props) => {
 
  const handleShow = () =>  {
     setShow(true)
-    console.log(selectedMember);
+   
   }
 
 
@@ -56,7 +57,7 @@ const TeamMember2 = (props) => {
           <Card
             className="m-2"
             onClick={() => {
-              learnMore(member.node);
+              learnMore(member);
               handleShow();
             }}
             style={{ cursor: "pointer" }}

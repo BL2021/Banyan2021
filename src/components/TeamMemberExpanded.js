@@ -3,12 +3,13 @@ import { Image, Modal } from "react-bootstrap";
 
 export default function TeamMemberExpanded(props) {
   if (props.member !== null) {
+ 
     return (
       <>
         <Modal show={props.show} onHide={props.onClose}>
           <Modal.Header closeButton>
             <Modal.Title>
-              {props.member.name} - {props.member.title}
+              {props.member.node.name} - {props.member.node.title}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body
@@ -19,7 +20,7 @@ export default function TeamMemberExpanded(props) {
             }}
           >
             <Image
-              src={props.member.image.fixed.src}
+              src={props.member.node.image.fixed.src}
               fluid
               rounded
               style={{
@@ -30,7 +31,7 @@ export default function TeamMemberExpanded(props) {
               }}
             />
             <br />
-            {props.member.bio.bio}
+            {props.member.node.bio.bio}
           </Modal.Body>
         </Modal>
       </>
