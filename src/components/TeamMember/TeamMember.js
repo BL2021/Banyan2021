@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import TeamMemberExpanded from "../TeamMemberExpanded";
 import { Card, Row, CardDeck, Col } from "react-bootstrap";
-
+import { graphql } from "gatsby"
 import "./styles.css";
 
 export default class TeamMember extends Component {
+
+
+
+  
   constructor(props) {
     super(props);
 
@@ -30,6 +34,28 @@ export default class TeamMember extends Component {
   }
 
   render() {
+
+    const query = graphql`
+    {
+      allContentfulTeamMember {
+        nodes {
+          id
+          name
+          image {
+            resolutions {
+              src
+            }
+          }
+          title
+          bio {
+            bio
+          }
+        }
+      }
+    }
+  `
+    console.log(query);
+
     const members = this.props.teamMembers.map((member) => {
       return (
         <Col sm={12} md={6} lg={3} key={member.id}>

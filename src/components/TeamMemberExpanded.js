@@ -19,7 +19,7 @@ export default function TeamMemberExpanded(props) {
             }}
           >
             <Image
-              src={props.member.image}
+              src={props.member.image.fixed.src}
               fluid
               rounded
               style={{
@@ -30,7 +30,7 @@ export default function TeamMemberExpanded(props) {
               }}
             />
             <br />
-            {props.member.bio}
+            {props.member.bio.bio}
           </Modal.Body>
         </Modal>
       </>
