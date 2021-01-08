@@ -1,21 +1,19 @@
-import React, { Component } from "react";
-import { Container, Row, Table, Figure } from "react-bootstrap";
-import Divider from "@material-ui/core/Divider";
-import AboutUsPic from "../styles/images/persevere_group.jpg";
-import "./about.css";
-import ReactGA from 'react-ga';
-
-import HeaderNav from "../components/HeaderNav";
-
+import React, { Component } from "react"
+import { Container, Row, Table, Figure } from "react-bootstrap"
+import Divider from "@material-ui/core/Divider"
+import AboutUsPic from "../styles/images/persevere_group.jpg"
+import "./about.css"
+import ReactGA from "react-ga"
+import ContactForm from "../components/Form"
+import HeaderNav from "../components/HeaderNav"
 
 export default class About extends Component {
   componentDidMount() {
-    window.scrollTo(0, 0);
-    ReactGA.initialize('UA-169087465-1')
-    ReactGA.pageview("/about_us"); 
+    window.scrollTo(0, 0)
+    ReactGA.initialize("UA-169087465-1")
+    ReactGA.pageview("/about_us")
   }
 
-  
   render() {
     return (
       <div
@@ -25,7 +23,7 @@ export default class About extends Component {
           marginTop: "70px",
         }}
       >
-      <HeaderNav />
+        <HeaderNav />
         <Row
           className="justify-content-center"
           style={{ backgroundColor: "#24234d" }}
@@ -126,7 +124,8 @@ export default class About extends Component {
             </Container>
           </Container>
         </Row>
+        <ContactForm />
       </div>
-    );
+    )
   }
 }

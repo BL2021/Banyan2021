@@ -4,6 +4,7 @@ import NaicoTeam from "../styles/images/naicoteam.jpg";
 import PersevereTeam from "../styles/images/persevere_group_photo.jpg";
 import ReactGA from 'react-ga';
 import HeaderNav from "../components/HeaderNav";
+import ContactForm from "../components/Form"
 export default class Partners extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -76,6 +77,7 @@ export default class Partners extends Component {
             </Row>
           </Container>
         </Row>
+        <ContactForm />
       </div>
     );
   }

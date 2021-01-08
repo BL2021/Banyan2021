@@ -1,0 +1,21 @@
+#appraisal-image {
+  max-width: 800px;
+  max-height: 500px;
+}
+
+#page-header {
+  background-color: #434c55 !important;
+  font-weight: bolder !important;
+  font-size: 3rem;
+  text-shadow: 1px 1px #f8f9fa;
+  margin-bottom: 5rem !important;
+}
+
+.col-md-5 {
+  background-color: #f8f9fa !important;
+  border: 1px solid black;
+}
+
+.mar-t {
+  margin-top: 200px;
+}

@@ -4,14 +4,17 @@ import "./style.css";
 import CheckIcon from "@material-ui/icons/Check";
 import ReactGA from 'react-ga';
 
+// import HeaderNav from "../HeaderNav";
+
 function Service(props) {
 
     ReactGA.initialize('UA-169087465-1')
-    ReactGA.pageview(props.url);
+
   
 
   return (
     <div>
+
       <Row style={{ backgroundColor: "#24234d" }}>
         <Container className="pt-4 pb-4 lead text-center text-light">
           <h1 className="display-4">{props.title}</h1>

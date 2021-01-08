@@ -98,7 +98,7 @@ const HeaderNav = (props) => {
                   updateIsOpen(false);
                 }}
                 as={Link}
-                to="/services/our_process"
+                to="/Services/our_process"
               >
                 Our Process
               </Dropdown.Item>
@@ -108,7 +108,7 @@ const HeaderNav = (props) => {
                   updateIsOpen(false);
                 }}
                 as={Link}
-                to="/services/web_apps"
+                to="/Services/web_apps"
               >
                 Web Apps
               </Dropdown.Item>
@@ -118,7 +118,7 @@ const HeaderNav = (props) => {
                   updateIsOpen(false);
                 }}
                 as={Link}
-                to="/services/mobile_apps"
+                to="/Services/mobile_apps"
               >
                 Mobile Apps
               </Dropdown.Item>
@@ -128,7 +128,7 @@ const HeaderNav = (props) => {
                   updateIsOpen(false);
                 }}
                 as={Link}
-                to="/services/quality_assurance"
+                to="/Services/quality_assurance"
               >
                 Quality Assurance
               </Dropdown.Item>

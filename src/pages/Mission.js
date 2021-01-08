@@ -4,6 +4,8 @@ import { Divider } from "@material-ui/core";
 import "./Mission.css";
 import ReactGA from 'react-ga';
 import HeaderNav from "../components/HeaderNav";
+import ContactForm from "../components/Form"
+
 export default class Mission extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -63,6 +65,7 @@ export default class Mission extends Component {
             </div>
           </Container>
         </Row>
+        <ContactForm />
       </div>
     );
   }

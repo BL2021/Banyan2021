@@ -1,19 +1,20 @@
-import React, { Component } from "react";
-import { Row, Container } from "react-bootstrap";
-import TeamMember from "../components/TeamMember/TeamMember";
-import { TEAMMEMBERS } from "../data/teamMembers";
-import ReactGA from 'react-ga'
-import HeaderNav from "../components/HeaderNav";
+import React, { Component } from "react"
+import { Row, Container } from "react-bootstrap"
+import TeamMember from "../components/TeamMember/TeamMember"
+import { TEAMMEMBERS } from "../data/teamMembers"
+import ReactGA from "react-ga"
+import HeaderNav from "../components/HeaderNav"
+import ContactForm from "../components/Form"
 export default class Team extends Component {
   componentDidMount() {
-    window.scrollTo(0, 0);
-    ReactGA.initialize('UA-169087465-1')
-    ReactGA.pageview("/team");
+    window.scrollTo(0, 0)
+    ReactGA.initialize("UA-169087465-1")
+    ReactGA.pageview("/team")
   }
   render() {
     return (
       <div>
-         <HeaderNav />
+        <HeaderNav />
         <Row
           style={{
             backgroundColor: "#24234d",
@@ -31,7 +32,8 @@ export default class Team extends Component {
             <TeamMember teamMembers={TEAMMEMBERS} />
           </Container>
         </Row>
+        <ContactForm />
       </div>
-    );
+    )
   }
 }
