@@ -37,11 +37,11 @@ export default class TeamMember extends Component {
 
     const query = graphql`
     {
-      allContentfulTeamMember {
+      allContentfulTheTeam {
         nodes {
           id
           name
-          image {
+          photo {
             resolutions {
               src
             }
@@ -52,8 +52,14 @@ export default class TeamMember extends Component {
           }
         }
       }
+    
     }
   `
+Collapse
+
+
+
+
     console.log(query);
 
     const members = this.props.teamMembers.map((member) => {

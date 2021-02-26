@@ -14,13 +14,13 @@ const TeamMember2 = (props) => {
 
     const data = useStaticQuery(graphql`
     {
-      allContentfulTeamMember {
+      allContentfulTheTeam {
         edges {
           node {
             bio {
               bio
             }
-            image {
+            photo {
               fixed {
                 src
               }
@@ -51,7 +51,7 @@ const TeamMember2 = (props) => {
   }
 
 
-    const members = data.allContentfulTeamMember.edges.map((member) => {
+    const members = data.allContentfulTheTeam.edges.map((member) => {
       return (
         <Col sm={12} md={6} lg={3} key={member.id}>
           <Card
@@ -65,7 +65,7 @@ const TeamMember2 = (props) => {
             <Card.Body style={{ border: "#24234d solid 3px" }}>
               <Card.Img
                 variant="top"
-                src={member.node.image.fixed.src}
+                src={member.node.photo.fixed.src}
                 className="cardImage"
               />
               <Card.Title
