@@ -15,23 +15,21 @@ const TeamMember2 = (props) => {
     const data = useStaticQuery(graphql`
     {
       allContentfulTheTeam {
-        edges {
-          node {
-            bio {
-              bio
+        nodes {
+          id
+          name
+          photo {
+            resolutions {
+              src
             }
-            photo {
-              fixed {
-                src
-              }
-            }
-              title
-         
-            name
+          }
+          title
+          bio {
+            bio
           }
         }
       }
-    }
+    }  
   `)
           
 
@@ -51,7 +49,7 @@ const TeamMember2 = (props) => {
   }
 
 
-    const members = data.allContentfulTheTeam.edges.map((member) => {
+    const members = data.allContentfulTheTeam.nodes.map((member) => {
       return (
         <Col sm={12} md={6} lg={3} key={member.id}>
           <Card
@@ -63,18 +61,18 @@ const TeamMember2 = (props) => {
             style={{ cursor: "pointer" }}
           >
             <Card.Body style={{ border: "#24234d solid 3px" }}>
-              <Card.Img
+               <Card.Img 
                 variant="top"
-                src={member.node.photo.fixed.src}
+                src={member.photo && member.photo.resolutions.src}
                 className="cardImage"
               />
               <Card.Title
                 style={{ textDecorationColor: "#494d83", fontSize: "1.35em" }}
               >
-                {member.node.name}
+                {member.name}
               </Card.Title>
               <Card.Subtitle>
-                <b>{member.node.title}</b>
+                <b>{member.title}</b>
               </Card.Subtitle>
               <br />
             </Card.Body>
