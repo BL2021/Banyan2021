@@ -9,7 +9,7 @@ const TeamMember2 = (props) => {
 
 
 
-    const [selectedMember, setMember] = useState(null);
+    const [selectedMember, setMember] = useState("");
     const [show, setShow] = useState(false);
 
     const data = useStaticQuery(graphql`
@@ -34,6 +34,7 @@ const TeamMember2 = (props) => {
     }
   `)
           
+console.log(data)
 
    const learnMore = (member) => {
     setMember(member)
@@ -50,9 +51,15 @@ const TeamMember2 = (props) => {
    
   }
 
-
+    let memberId = ""
     const members = data.allContentfulTheTeam.edges.map((member) => {
       return (
+        <div>
+          
+        { memberId = parseInt(member.id)}
+
+        {console.log(memberId)}
+        
         <Col sm={12} md={6} lg={3} key={member.id}>
           <Card
             className="m-2"
@@ -63,10 +70,12 @@ const TeamMember2 = (props) => {
             style={{ cursor: "pointer" }}
           >
             <Card.Body style={{ border: "#24234d solid 3px" }}>
+              {console.log(member)}
               <Card.Img
                 variant="top"
                 src={member.node.photo.fixed.src}
                 className="cardImage"
+                // fixed={fixed}
               />
               <Card.Title
                 style={{ textDecorationColor: "#494d83", fontSize: "1.35em" }}
@@ -80,6 +89,7 @@ const TeamMember2 = (props) => {
             </Card.Body>
           </Card>
         </Col>
+        </div>
       );
     });
 

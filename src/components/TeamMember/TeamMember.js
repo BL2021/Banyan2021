@@ -38,25 +38,25 @@ export default class TeamMember extends Component {
     const query = graphql`
     {
       allContentfulTheTeam {
-        nodes {
-          id
-          name
-          photo {
-            resolutions {
-              src
+        edges {
+          node {
+            bio {
+              bio
             }
-          }
-          title
-          bio {
-            bio
+            photo {
+              fixed {
+                src
+              }
+            }
+              title
+         
+            name
           }
         }
       }
     
     }
   `
-Collapse
-
 
 
 
@@ -76,7 +76,7 @@ Collapse
             <Card.Body style={{ border: "#24234d solid 3px" }}>
               <Card.Img
                 variant="top"
-                src={member.image}
+                src={member.photo}
                 className="cardImage"
               />
               <Card.Title
