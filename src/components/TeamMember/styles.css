@@ -1,8 +1,8 @@
 .cardImage {
   height: auto;
-  max-height: 179px;
+  max-height: 200px;
   width: auto;
-  max-width: 191px;
+  max-width: 200px;
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -32,7 +32,7 @@
   height: auto;
   max-height: 300px;
   width: auto;
-  max-width: 250p;
+  max-width: 250px;
 
 
 
