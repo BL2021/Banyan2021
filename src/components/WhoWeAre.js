@@ -10,13 +10,13 @@ export default function WhoWeAre() {
     <div>
       <div className="row justify-content-center p-5">
         <div className="text-center col-12">
-          <Link className="no-dec " to="/about_us">
+          <Link className="no-dec " to="/About">
             <h3 className="display-4 prim-txt">Who We Are</h3>
           </Link>
         </div>
 
         <div style={{ maxwidth: "1200px" }} className="text-center">
-          <Link className="no-dec" to="/about_us">
+          <Link className="no-dec" to="/About">
             <h3 className="header-size-2 pt-5 sec-txt">About</h3>
           </Link>
           <p className="lead py-3" style={{ fontSize: "24px" }}>
@@ -31,7 +31,7 @@ export default function WhoWeAre() {
             software development careers by providing service, experience, and
             opportunities at every turn.
           </p>
-          <Link className="no-dec" to="/mission">
+          <Link className="no-dec" to="/Mission">
             <h3 className="header-size-2 sec-txt pt-2">Mission</h3>
           </Link>
           <p className="lead py-3" style={{ fontSize: "24px" }}>
@@ -39,7 +39,7 @@ export default function WhoWeAre() {
           </p>
         </div>
         <div>
-          <Link className="no-dec" to="/team">
+          <Link className="no-dec" to="/Team">
             <h3 className="text-center display-4 prim-txt py-5">Team</h3>
           </Link>
           <Figure style={{ maxwidth: "1200px" }}>
@@ -54,7 +54,7 @@ export default function WhoWeAre() {
           </Figure>
         </div>
         <div className="col-12 text-center mt-3">
-          <Link className="no-dec" to="/partners">
+          <Link className="no-dec" to="/Partners">
             <h3 className="display-4 prim-txt mb-3 py-5">Partners</h3>
           </Link>
           <Figure>
