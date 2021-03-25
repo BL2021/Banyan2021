@@ -3,15 +3,9 @@ import TeamMemberExpanded from "../TeamMemberExpanded";
 import { Card, Row, CardDeck, Col } from "react-bootstrap";
 import { useStaticQuery, graphql } from "gatsby"
 import "./styles.css";
-
 const TeamMember2 = (props) => {
-
-
-
-
     const [selectedMember, setMember] = useState(null);
     const [show, setShow] = useState(false);
-
     const data = useStaticQuery(graphql`
     {
       allContentfulTheTeam {
@@ -22,34 +16,30 @@ const TeamMember2 = (props) => {
             resolutions {
               src
             }
-          }
-          title
-          bio {
-            bio
+            photo {
+              fixed {
+                src
+              }
+            }
+              title
+            name
           }
         }
       }
     }  
   `)
-          
-
    const learnMore = (member) => {
     setMember(member)
     console.log(selectedMember);
     return selectedMember;
   }
-
   const handleClose = () =>  {
     setShow(false)
   }
-
  const handleShow = () =>  {
     setShow(true)
-   
   }
-
-
-    const members = data.allContentfulTheTeam.nodes.map((member) => {
+    const members = data.allContentfulTheTeam.edges.map((member) => {
       return (
         <Col sm={12} md={6} lg={3} key={member.id}>
           <Card
@@ -61,7 +51,7 @@ const TeamMember2 = (props) => {
             style={{ cursor: "pointer" }}
           >
             <Card.Body style={{ border: "#24234d solid 3px" }}>
-               <Card.Img 
+              <Card.Img
                 variant="top"
                 src={member.photo && member.photo.resolutions.src}
                 className="cardImage"
@@ -80,12 +70,10 @@ const TeamMember2 = (props) => {
         </Col>
       );
     });
-
     return (
       <div className="container">
         <Row className="mb-2">
           <CardDeck>{members}</CardDeck>
-
           <TeamMemberExpanded
             member={selectedMember}
             show={show}
@@ -95,5 +83,4 @@ const TeamMember2 = (props) => {
       </div>
     );
   }
-
   export default TeamMember2;
