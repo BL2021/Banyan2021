@@ -3,15 +3,9 @@ import TeamMemberExpanded from "../TeamMemberExpanded";
 import { Card, Row, CardDeck, Col } from "react-bootstrap";
 import { useStaticQuery, graphql } from "gatsby"
 import "./styles.css";
-
 const TeamMember2 = (props) => {
-
-
-
-
     const [selectedMember, setMember] = useState(null);
     const [show, setShow] = useState(false);
-
     const data = useStaticQuery(graphql`
     {
       allContentfulTheTeam {
@@ -26,31 +20,23 @@ const TeamMember2 = (props) => {
               }
             }
               title
-         
             name
           }
         }
       }
     }
   `)
-          
-
    const learnMore = (member) => {
     setMember(member)
     console.log(selectedMember);
     return selectedMember;
   }
-
   const handleClose = () =>  {
     setShow(false)
   }
-
  const handleShow = () =>  {
     setShow(true)
-   
   }
-
-
     const members = data.allContentfulTheTeam.edges.map((member) => {
       return (
         <Col sm={12} md={6} lg={3} key={member.id}>
@@ -62,14 +48,18 @@ const TeamMember2 = (props) => {
             }}
             style={{ cursor: "pointer" }}
           >
+
             <Card.Body style={{ border: "#24234d solid 3px", textAlign: "center", }}>
+
+            <Card.Body style={{ border: "#24234D solid 3px" }}>
+
               <Card.Img
                 variant="top"
                 src={member.node.photo.fixed.src}
                 className="cardImage"
               />
               <Card.Title
-                style={{ textDecorationColor: "#494d83", fontSize: "1.35em" }}
+                style={{ textDecorationColor: "#494D83", fontSize: "1.35em" }}
               >
                 {member.node.name}
               </Card.Title>
@@ -82,12 +72,10 @@ const TeamMember2 = (props) => {
         </Col>
       );
     });
-
     return (
       <div className="container">
         <Row className="mb-2">
           <CardDeck>{members}</CardDeck>
-
           <TeamMemberExpanded
             member={selectedMember}
             show={show}
@@ -97,5 +85,4 @@ const TeamMember2 = (props) => {
       </div>
     );
   }
-
   export default TeamMember2;
