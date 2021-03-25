@@ -4,8 +4,8 @@ import { Card, Row, CardDeck, Col } from "react-bootstrap";
 import { useStaticQuery, graphql } from "gatsby"
 import "./styles.css";
 const TeamMember2 = (props) => {
-    const [selectedMember, setMember] = useState(null);
-    const [show, setShow] = useState(false);
+  const [selectedMember, setMember] = useState(null);
+  const [show, setShow] = useState(false);
     const data = useStaticQuery(graphql`
     {
       allContentfulTheTeam {
@@ -20,12 +20,12 @@ const TeamMember2 = (props) => {
               }
             }
               title
-            name
+              name
+            }
           }
         }
       }
-    }
-  `)
+    `)
    const learnMore = (member) => {
     setMember(member)
     console.log(selectedMember);
@@ -39,7 +39,7 @@ const TeamMember2 = (props) => {
   }
     const members = data.allContentfulTheTeam.edges.map((member) => {
       return (
-        <Col sm={12} md={6} lg={3} key={member.id}>
+        <Col sm={12} md={6} lg={4} key={member.id}>
           <Card
             className="m-2"
             onClick={() => {
@@ -49,9 +49,13 @@ const TeamMember2 = (props) => {
             style={{ cursor: "pointer" }}
           >
 
+
             <Card.Body style={{ border: "#24234d solid 3px", textAlign: "center", }}>
 
-            <Card.Body style={{ border: "#24234D solid 3px" }}>
+            
+
+
+            
 
               <Card.Img
                 variant="top"
@@ -59,7 +63,7 @@ const TeamMember2 = (props) => {
                 className="cardImage"
               />
               <Card.Title
-                style={{ textDecorationColor: "#494D83", fontSize: "1.35em" }}
+                style={{ textDecorationColor: "#494d83", fontSize: "1.35em" }}
               >
                 {member.node.name}
               </Card.Title>
