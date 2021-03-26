@@ -62,7 +62,6 @@ const WhatWeDo = (props) => {
           that.
         </p>
       </div>
-       
     </div>
   );
 };
