@@ -3,15 +3,9 @@ import TeamMemberExpanded from "../TeamMemberExpanded";
 import { Card, Row, CardDeck, Col } from "react-bootstrap";
 import { useStaticQuery, graphql } from "gatsby"
 import "./styles.css";
-
 const TeamMember2 = (props) => {
-
-
-
-
-    const [selectedMember, setMember] = useState("");
+    const [selectedMember, setMember] = useState(null);
     const [show, setShow] = useState(false);
-
     const data = useStaticQuery(graphql`
     {
       allContentfulTheTeam {
@@ -26,40 +20,49 @@ const TeamMember2 = (props) => {
               }
             }
               title
-         
             name
           }
         }
       }
     }
   `)
-          
-console.log(data)
-
    const learnMore = (member) => {
     setMember(member)
     console.log(selectedMember);
     return selectedMember;
   }
-
   const handleClose = () =>  {
     setShow(false)
   }
-
  const handleShow = () =>  {
     setShow(true)
-   
   }
 
-    let memberId = ""
+ 
+// FUNCTION TO SORT DEVELOPERS TO STAY AT THE TOP OF THE PAGE, WHILE ADMIN STAFF IS AT THE BOTTOM
+
+function sortEmployees(data){
+  let employees = data.allContentfulTheTeam.edges
+  
+  return employees.sort(employee => {
+    if(employee.node.title === "Developer"){
+      return -1
+    }else {
+      return 1
+    }
+  })
+}
+sortEmployees(data)
+
+
+  
+
+
+
+
+
     const members = data.allContentfulTheTeam.edges.map((member) => {
       return (
-        <div>
-          
-        { memberId = parseInt(member.id)}
-
-        {console.log(memberId)}
-        
         <Col sm={12} md={6} lg={3} key={member.id}>
           <Card
             className="m-2"
@@ -69,16 +72,14 @@ console.log(data)
             }}
             style={{ cursor: "pointer" }}
           >
-            <Card.Body style={{ border: "#24234d solid 3px" }}>
-              {console.log(member)}
+            <Card.Body style={{ border: "#24234D solid 3px" }}>
               <Card.Img
                 variant="top"
                 src={member.node.photo.fixed.src}
                 className="cardImage"
-                // fixed={fixed}
               />
               <Card.Title
-                style={{ textDecorationColor: "#494d83", fontSize: "1.35em" }}
+                style={{ textDecorationColor: "#494D83", fontSize: "1.35em" }}
               >
                 {member.node.name}
               </Card.Title>
@@ -89,15 +90,12 @@ console.log(data)
             </Card.Body>
           </Card>
         </Col>
-        </div>
       );
     });
-
     return (
       <div className="container">
         <Row className="mb-2">
           <CardDeck>{members}</CardDeck>
-
           <TeamMemberExpanded
             member={selectedMember}
             show={show}
@@ -107,5 +105,4 @@ console.log(data)
       </div>
     );
   }
-
   export default TeamMember2;
