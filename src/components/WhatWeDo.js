@@ -62,25 +62,7 @@ const WhatWeDo = (props) => {
           that.
         </p>
       </div>
-      <div className="d-flex flex-column align-items-center col-md-4 col-lg-4 col-sm-12 mb-3">
-        <Link
-          to="/services/quality_assurance"
-          className="d-flex flex-column no-dec"
-        >
-          <AssignmentTurnedInIcon
-            style={{ ...iconStyles, color: "#494d83" }}
-            className="mb-3 align-self-center iconH"
-          />
-          <h2 className="text-center mb-3 sec-txt hover-sec wordH">
-            Quality Assurance
-          </h2>
-        </Link>
-        <p className="text-center lead" style={{ fontSize: "24px" }}>
-          Say what we do. Do what we say. Prove it. Improve it. Minimizing your
-          risks is part of our process whether it’s manual performance testing
-          or automated functional testing.
-        </p>
-      </div>
+       
     </div>
   );
 };
