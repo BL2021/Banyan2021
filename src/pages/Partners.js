@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import NaicoTeam from "../styles/images/naicoteam.jpg";
 import PersevereTeam from "../styles/images/persevere_group_photo.jpg";
+import Naico from "../styles/images/naico.jpg";
+import PersLogo from "../styles/images/persLogo.png";
 import ReactGA from 'react-ga';
 import HeaderNav from "../components/HeaderNav";
 import ContactForm from "../components/Form"
@@ -34,7 +36,7 @@ export default class Partners extends Component {
             </div>
             <Row>
               <Col lg={3}>
-                <Image src="./Pictures/naico-logo.jpg" fluid />
+                <Image src={Naico} fluid />
               </Col>
               <Col lg={9}>
                 <p>
@@ -56,7 +58,7 @@ export default class Partners extends Component {
             </div>
             <Row>
               <Col lg={3}>
-                <Image src="./Pictures/persevere-logo.svg" fluid />
+                <Image src={PersLogo} fluid />
               </Col>
               <Col lg={9}>
                 <p>
