@@ -15,7 +15,7 @@ const WhatWeDo = (props) => {
         <h1 className="text-center prim-txt display-4">What We Do</h1>
       </div>
       <div className="d-flex flex-column align-items-center justify-content-center col-md-9 col-lg-9 col-sm-12 mb-3">
-        <Link to="/services/our_process" className="d-flex flex-column no-dec">
+        <Link to="/Services/our_process" className="d-flex flex-column no-dec">
           <FormatListBulletedIcon
             style={{ ...iconStyles, color: "#494d83" }}
             className="mb-3 align-self-center iconH"
@@ -37,7 +37,7 @@ const WhatWeDo = (props) => {
         </p>
       </div>
       <div className="d-flex flex-column align-items-center col-md-4 col-lg-4 col-sm-12 mb-3">
-        <Link to="/services/web_apps" className="d-flex flex-column no-dec">
+        <Link to="/Services/web_apps" className="d-flex flex-column no-dec">
           <DesktopWindowsIcon
             style={{ ...iconStyles, color: "#494d83" }}
             className="mb-3 align-self-center iconH"
@@ -50,7 +50,7 @@ const WhatWeDo = (props) => {
         </p>
       </div>
       <div className="d-flex flex-column align-items-center col-md-4 col-lg-4 col-sm-12 mb-3">
-        <Link to="/services/mobile_apps" className="d-flex flex-column no-dec">
+        <Link to="/Services/mobile_apps" className="d-flex flex-column no-dec">
           <PhoneAndroidIcon
             style={{ ...iconStyles, color: "#494d83" }}
             className="mb-3 align-self-center iconH"
@@ -64,7 +64,7 @@ const WhatWeDo = (props) => {
       </div>
       <div className="d-flex flex-column align-items-center col-md-4 col-lg-4 col-sm-12 mb-3">
         <Link
-          to="/services/quality_assurance"
+          to="/Services/quality_assurance"
           className="d-flex flex-column no-dec"
         >
           <AssignmentTurnedInIcon
