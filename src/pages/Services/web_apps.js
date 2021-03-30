@@ -6,7 +6,7 @@ import HeaderNav from "../../components/HeaderNav";
 export class web_apps extends Component {
   render() {
     return (
-      <div className="mt-5">
+      <div style={{ marginTop: 70 }}>
       <HeaderNav />
             <Service
          

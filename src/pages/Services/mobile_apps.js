@@ -6,7 +6,7 @@ import native from "../../styles/images/rnative.png";
 export class mobile_apps extends Component {
   render() {
     return (
-      <div className="mt-5">
+      <div style={{ marginTop: 70 }}>
       <HeaderNav />
 
             <Service

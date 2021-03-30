@@ -19,7 +19,7 @@ export default class About extends Component {
       <div
         style={{
           color: "white",
-          fontSize: "22px",
+          fontSize: "16px",
           marginTop: "70px",
         }}
       >
