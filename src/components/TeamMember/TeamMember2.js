@@ -43,37 +43,7 @@ const TeamMember2 = (props) => {
 // FUNCTION TO SORT DEVELOPERS TO STAY AT THE TOP OF THE PAGE, WHILE ADMIN STAFF IS AT THE BOTTOM
 
 
-    const members = data.allContentfulTheTeam.edges.map((member) => {
-      return (
-        <Col sm={12} md={6} lg={3} key={member.id}>
-          <Card
-            className="m-2"
-            onClick={() => {
-              learnMore(member);
-              handleShow();
-            }}
-            style={{ cursor: "pointer" }}
-          >
-            <Card.Body style={{ border: "#24234d solid 3px", textAlign: "center", width: "auto", }}>
-              <Card.Img
-                variant="top"
-                src={member.node.photo.fixed.src}
-                className="cardImage"
-              />
-              <Card.Title
-                style={{ textDecorationColor: "#494d83", fontSize: "1.35em" }}
-              >
-                {member.node.name}
-              </Card.Title>
-              <Card.Subtitle>
-                <b>{member.node.title}</b>
-              </Card.Subtitle>
-              <br />
-            </Card.Body>
-          </Card>
-        </Col>
-      );
-    });
+    
 
   function sortEmployees(data){
     let employees = data.allContentfulTheTeam.edges
@@ -100,7 +70,7 @@ const TeamMember2 = (props) => {
           }}
           style={{ cursor: "pointer" }}
         >
-        <Card.Body style={{ border: "#24234d solid 3px", textAlign: "center", }}>
+        <Card.Body style={{ border: "#24234d solid 3px", textAlign: "center", width: "fit-content", }}>
             <Card.Img
               variant="top"
               src={member.node.photo.fixed.src}
