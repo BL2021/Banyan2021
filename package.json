@@ -24,7 +24,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
-    "contentful": "^8.1.7",
+    "contentful": "^8.2.0",
     "css-loader": "^3.5.2",
     "dotenv": "^8.2.0",
     "emailjs-com": "^2.4.1",

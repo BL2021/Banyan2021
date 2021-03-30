@@ -1,4 +1,4 @@
-import AlexF from "../styles/images/alexF.jpg"
+import AlexF from "../styles/images/alexF.jpg";
 import AlexM from "../styles/images/alexM.jpg";
 import AnupC from "../styles/images/anupC.jpg";
 import KennethG from "../styles/images/kennethG.jpg";
@@ -12,10 +12,10 @@ import ZachH from "../styles/images/zachH.png";
 import DemarcusW from "../styles/images/demarcusW.jpg";
 import LukeM from "../styles/images/lukeM.jpg";
 import Male from "../styles/images/male.png";
-import Helen from "../styles/images/Helen.jpg"
-import Willie from "../styles/images/Willie.jpg"
-import DavidD from "../styles/images/DavidD.jpg"
-import BarryC from "../styles/images/BarryC.jpg"
+import Helen from "../styles/images/Helen.jpg";
+import Willie from "../styles/images/Willie.jpg";
+import DavidD from "../styles/images/DavidD.jpg";
+import BarryC from "../styles/images/BarryC.jpg";
 
 export const TEAMMEMBERS = [
   {
@@ -90,7 +90,7 @@ export const TEAMMEMBERS = [
     bio:
       "Kenneth is an Intermediate in Web Development and Mechanical Drafting. He is certified through Microsoft as an (MOS) Microsoft Office Specialist in Word, PowerPoint, Excel, and Access Software. Kenneth holds certificates in Drafting Apprenticeship, Drafting Detail-er, and a member of the National Technical Honor Society. He has also obtained a Presidential Achievement Award (from the Obama Administration). He is determined, and drives to one day become a successful Entrepreneur. He has been employed with the Persevere team since October, 03 2019. He has become certified and successful in HTML, CSS, JAVASCRIPT, and is familiar with the REACT library. He was born in Palos Heights, Illinois, and moved to the state of Tennessee with his mother at the age of three. His Grandmother traveled to the United States while still inside her mothers stomach from Czechoslovakia.  Kenneth strives from the recreation of his life. Proud of his new standard of life, transitioning from an ex-felon to a proud man of career. Kenneth' favorite quote is “Don't get too deep, it leads to over thinking, and over thinking leads to problems that doesn't even exist in the first place.” by ― Jayson Engay.",
   },
-  {
+  {           
     id: 9,
     name: "Roy Yates",
     title: "Developer",
@@ -98,13 +98,13 @@ export const TEAMMEMBERS = [
     bio:
       "Roy Yates is one of the newest members of the Persevere Family. Roy was born in Central Florida, and later moved to and was  raised in middle Tennessee. He is one of our Junior level Software developers, who is learned in HTML, CSS and JavaScript. Roy has aspirations in moving toward a career that is oriented around UI/UX, primarily in design and the aesthetics of software and site development. Roy has been coding and learning software development with Persevere for almost six months, and has hopes in pursuing a long and lustrous career in development and design. He wants to apply his background in various artistic areas to the digital world, to interact with the customers to bring their ideas into fruition. ",
   },
-  {
+   {
     id: 16,
     name: "Helen Napper",
     title: "Developer",
     image: Helen,
     bio:
-      "Helen Napper, 41 years of age, is a Jr. Software Developer. She has a certification in Responsive Web Design covering HTML5, CSS3, and JavaScript, and has experience in customer service. Helen was born in Illinois and moved to Memphis, TN in 2005. She has been coding since May of 2020, and has excelled within a short period of time. Helen is very detail-oriented and would like to apply her eye for perfection to being a knowledgeable and effective coder. ",
+      "Helen Napper, 41 years of age, is a Jr. Software Developer. She has a certification in responsive Web Design covering HTML5, CSS3, and JavaScript, and has experience in customer service. Helen was born in Illinois and moved to Memphis,TN in 2005. She has been coding since May of 2020, and has excelled within a short period of time. Helen is very detailed-oriented and would like to apply her eye for perfection to being a knowledgeable and effective coder." 
   },
   {
     id: 17,

@@ -122,16 +122,7 @@ const HeaderNav = (props) => {
               >
                 Mobile Apps
               </Dropdown.Item>
-              <Dropdown.Item
-                onClick={() => {
-                  setExpanded(false);
-                  updateIsOpen(false);
-                }}
-                as={Link}
-                to="/Services/quality_assurance"
-              >
-                Quality Assurance
-              </Dropdown.Item>
+              
             </NavDropdown>
             <Nav.Link
               className="mx-2 mr-lg-5"

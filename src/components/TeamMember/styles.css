@@ -1,9 +1,12 @@
 .cardImage {
   height: auto;
-  max-height: 179px;
+  max-height: 200px;
   width: auto;
+
   max-width: 150px;
+
 }
+
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 767.98px) {
@@ -23,4 +26,17 @@
     width: auto;
     max-width: 500px;
   }
+}
+
+.card{
+  
+
+
+  height: auto;
+  max-height: 300px;
+  width: auto;
+  max-width: 250px;
+
+
+
 }
