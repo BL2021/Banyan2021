@@ -28,8 +28,8 @@ export default class About extends Component {
           className="justify-content-center"
           style={{ backgroundColor: "#24234d" }}
         >
-          <Container className=" pt-4 pb-4 text-center">
-            <h1 className="display-3 pl-3">About Us</h1>
+          <Container className="text-center">
+            <h1 className="display-3 text-justify text-center p-4">About Us</h1>
           </Container>
         </Row>
         <Row className="justify-content-center">

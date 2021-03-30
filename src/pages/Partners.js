@@ -23,8 +23,8 @@ export default class Partners extends Component {
       >
             <HeaderNav />
         <Row style={{ backgroundColor: "#24234d" }}>
-          <Container className="pt-4 pb-4 text-center">
-            <h1 className="display-3">Our Partners</h1>
+          <Container className="text-center">
+            <h1 className="display-3 text-justify text-center p-4">Our Partners</h1>
           </Container>
         </Row>
         <Row>
