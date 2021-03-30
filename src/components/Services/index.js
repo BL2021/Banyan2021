@@ -16,8 +16,8 @@ function Service(props) {
     <div>
 
       <Row style={{ backgroundColor: "#24234d" }}>
-        <Container className="pt-4 pb-4 lead text-center text-light">
-          <h1 className="display-4">{props.title}</h1>
+        <Container className="text-center">
+          <h1 className="display-3 text-justify text-center p-4">{props.title}</h1>
         </Container>
       </Row>
 

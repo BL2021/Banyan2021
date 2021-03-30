@@ -17,8 +17,8 @@ export default class Mission extends Component {
       <div className="main">
           <HeaderNav />
         <Row className="header">
-          <Container className="p-4 text-center">
-            <h1 className="display-3">Mission</h1>
+          <Container className="text-center">
+            <h1 className="display-3 text-justify text-center p-4">Mission</h1>
           </Container>
         </Row>
         <Row>

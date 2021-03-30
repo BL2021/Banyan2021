@@ -27,7 +27,7 @@ import ContactForm from "../components/Form"
           }}
         >
           <Container className="text-center">
-            <h1 className="display-3 text-justify text-center p-3">Team</h1>
+            <h1 className="display-3 text-justify text-center p-4">Team</h1>
           </Container>
         </Row>
 
