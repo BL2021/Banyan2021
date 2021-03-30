@@ -7,7 +7,7 @@ export class our_process extends Component {
   render() {
     return (
     
-         <div className="mt-5">
+         <div style={{ marginTop: 70 }}>
          <HeaderNav />
             <Service
               img="https://wishdesk.com/sites/default/files/inline-images/Traditional%20Web%20Development%20Process.jpg"

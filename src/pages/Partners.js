@@ -18,7 +18,7 @@ export default class Partners extends Component {
       <div
         style={{
           color: "white",
-          fontSize: "22px",
+          fontSize: "16px",
           marginTop: "70px",
         }}
         className="lead"
