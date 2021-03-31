@@ -3,6 +3,7 @@ import Service from "../../components/Services";
 import "./serve.css";
 import Diagram2 from "../../styles/images/new_junt.jpg";
 import HeaderNav from "../../components/HeaderNav";
+import ContactForm from "../../components/Form"
 export class web_apps extends Component {
   render() {
     return (
@@ -18,6 +19,7 @@ export class web_apps extends Component {
             />
 
             <br />
+            <ContactForm />
           </div>
 
     );

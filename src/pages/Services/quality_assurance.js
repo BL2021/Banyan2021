@@ -3,6 +3,7 @@ import Service from "../../components/Services";
 import "./serve.css";
 import Diagram2 from "../../styles/images/new_junt.jpg";
 import HeaderNav from "../../components/HeaderNav";
+import ContactForm from "../../components/Form"
 export class quality_assurance extends Component {
   render() {
     return (
@@ -17,6 +18,7 @@ export class quality_assurance extends Component {
             />
 
             <br />
+            <ContactForm />
           </div>
 
     );
