@@ -70,7 +70,7 @@ const TeamMember2 = (props) => {
           }}
           style={{ cursor: "pointer" }}
         >
-        <Card.Body style={{ border: "#24234d solid 3px", textAlign: "center", width: "fit-content", }}>
+        <Card.Body style={{ border: "#24234d solid 3px", textAlign: "center", }}>
             <Card.Img
               variant="top"
               src={member.node.photo.fixed.src}
