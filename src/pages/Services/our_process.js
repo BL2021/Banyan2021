@@ -3,6 +3,7 @@ import Service from "../../components/Services";
 import "./serve.css";
 import Diagram from "../../styles/images/ourprocess.png";
 import HeaderNav from "../../components/HeaderNav";
+import ContactForm from "../../components/Form"
 export class our_process extends Component {
   render() {
     return (
@@ -20,6 +21,7 @@ export class our_process extends Component {
               h3="Talk with us about how Banyan Labs can affordably and expertly partner with you in your success."
             />
             <br />
+            <ContactForm />
           </div>
     
     );
