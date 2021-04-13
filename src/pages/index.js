@@ -6,6 +6,8 @@ import Information from "../components/Information";
 import HeaderNav from "../components/HeaderNav";
 import ContactForm from "../components/Form" 
 import ReactGA from 'react-ga';
+import SEO from "../components/seo";
+
 export default class Home extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -16,7 +18,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="container-fluid n-p p-0">
-    
+    <SEO />
     <HeaderNav />
         <Carousel />
         <div className="container-fluid n-p p-0">

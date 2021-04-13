@@ -4,7 +4,17 @@ require("dotenv").config({
 
 module.exports = {
   /* Your site config here */
-  plugins: [
+  siteMetadata : {
+    title: `Banyanlabs`,
+    description:
+    `Software Developers`,
+    url: `https://banyanyanlabs.io`,
+    author: `Banyanlabs`
+
+  },
+  plugins: [ 
+    
+      `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
