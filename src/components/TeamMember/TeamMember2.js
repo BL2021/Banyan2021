@@ -42,8 +42,12 @@ const TeamMember2 = (props) => {
 
 // FUNCTION TO SORT DEVELOPERS TO STAY AT THE TOP OF THE PAGE, WHILE ADMIN STAFF IS AT THE BOTTOM
 
+
+    
+
   function sortEmployees(data){
     let employees = data.allContentfulTheTeam.edges
+
 
     return employees.sort(employee => {
       if(employee.node.title === "Developer"){
