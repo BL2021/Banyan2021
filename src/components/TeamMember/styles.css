@@ -2,7 +2,7 @@
   height: auto;
   max-height: 179px;
   min-height: 200px;
-  max-width: auto;
+  
  
 
 }
@@ -24,7 +24,7 @@
     height: auto;
     max-height: 266px;
     width: auto;
-    max-width: 500px;
+    max-width: 250px;
   }
 }
 
