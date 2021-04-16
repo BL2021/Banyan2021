@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import CheckIcon from "@material-ui/icons/Check";
 import ReactGA from 'react-ga';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 // import HeaderNav from "../HeaderNav";
 
 function Service(props) {
@@ -40,11 +40,9 @@ function Service(props) {
       >
         {props.diagram && (
           <div className="row justify-content-center mt-4 mb-3">
-            <Img
-            style={{width:'100%',height:'100%'}}
-              src={data.file.childImageSharp.fluid.src}
+          <img
+              src={props.diagram}
               alt="img"
-              fluid={data.file.childImageSharp.fluid}
               className="px-5 col-md-9 col-sm-12 mx-auto max-hw"
             />
           </div>
@@ -140,3 +138,4 @@ function Service(props) {
   );
 }
 export default Service;
+
