@@ -1,16 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Table } from "react-bootstrap";
 import "./style.css";
+import { graphql, useStaticQuery } from 'gatsby';
+
 import CheckIcon from "@material-ui/icons/Check";
 import ReactGA from 'react-ga';
-
+import Img from 'gatsby-image';
 // import HeaderNav from "../HeaderNav";
 
 function Service(props) {
 
     ReactGA.initialize('UA-169087465-1')
 
-  
+    const data = useStaticQuery(graphql`
+    query {
+     file(relativePath: {eq: "alexM.jpg"}) {
+       childImageSharp {
+         fluid {
+           ...GatsbyImageSharpFluid
+           src
+         }
+       }
+     }
+   }
+       `)
 
   return (
     <div>
@@ -27,9 +40,11 @@ function Service(props) {
       >
         {props.diagram && (
           <div className="row justify-content-center mt-4 mb-3">
-            <img
-              src={props.diagram}
+            <Img
+            style={{width:'100%',height:'100%'}}
+              src={data.file.childImageSharp.fluid.src}
               alt="img"
+              fluid={data.file.childImageSharp.fluid}
               className="px-5 col-md-9 col-sm-12 mx-auto max-hw"
             />
           </div>

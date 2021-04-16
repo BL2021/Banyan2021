@@ -5,10 +5,20 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require("node-sass"),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path:  `${__dirname}/src/styles/images`,
       },
     },
     {
