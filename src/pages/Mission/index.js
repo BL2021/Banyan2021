@@ -1,21 +1,20 @@
-import React, { Component } from "react";
-import { Container, Row } from "react-bootstrap";
-import { Divider } from "@material-ui/core";
-import "./Mission.css";
-import ReactGA from 'react-ga';
-import HeaderNav from "../components/HeaderNav";
-import ContactForm from "../components/Form"
+import React, { Component } from "react"
+import { Container, Row } from "react-bootstrap"
+import { Divider } from "@material-ui/core"
+import "./Mission.css"
+import ReactGA from "react-ga"
+import ContactForm from "../../components/Form"
+import MainLayout from "../../components/Layout/MainLayout"
 
 export default class Mission extends Component {
   componentDidMount() {
-    window.scrollTo(0, 0);
-    ReactGA.initialize('UA-169087465-1')
-    ReactGA.pageview("/mission"); 
+    window.scrollTo(0, 0)
+    ReactGA.initialize("UA-169087465-1")
+    ReactGA.pageview("/mission")
   }
   render() {
     return (
-      <div className="main">
-          <HeaderNav />
+      <MainLayout>
         <Row className="header">
           <Container className="text-center">
             <h1 className="display-3 text-justify text-center p-4">Mission</h1>
@@ -66,7 +65,7 @@ export default class Mission extends Component {
           </Container>
         </Row>
         <ContactForm />
-      </div>
-    );
+      </MainLayout>
+    )
   }
 }

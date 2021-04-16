@@ -1,11 +1,11 @@
 import React, { Component } from "react"
 import { Container, Row, Table, Figure } from "react-bootstrap"
 import Divider from "@material-ui/core/Divider"
-import AboutUsPic from "../styles/images/persevere_group.jpg"
+import AboutUsPic from "../../styles/images/persevere_group.jpg"
 import "./about.css"
 import ReactGA from "react-ga"
-import ContactForm from "../components/Form"
-import HeaderNav from "../components/HeaderNav"
+import ContactForm from "../../components/Form"
+import MainLayout from "../../components/Layout/MainLayout"
 
 export default class About extends Component {
   componentDidMount() {
@@ -16,14 +16,7 @@ export default class About extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          color: "white",
-          fontSize: "16px",
-          marginTop: "70px",
-        }}
-      >
-        <HeaderNav />
+      <MainLayout>
         <Row
           className="justify-content-center"
           style={{ backgroundColor: "#24234d" }}
@@ -125,7 +118,7 @@ export default class About extends Component {
           </Container>
         </Row>
         <ContactForm />
-      </div>
+      </MainLayout>
     )
   }
 }

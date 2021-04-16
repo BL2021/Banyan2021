@@ -1,32 +1,27 @@
-import React, { Component } from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import NaicoTeam from "../styles/images/naicoteam.jpg";
-import PersevereTeam from "../styles/images/persevere_group_photo.jpg";
-import Naico from "../styles/images/naico.jpg";
-import PersLogo from "../styles/images/persLogo.png";
-import ReactGA from 'react-ga';
-import HeaderNav from "../components/HeaderNav";
-import ContactForm from "../components/Form"
+import React, { Component } from "react"
+import { Container, Row, Col, Image } from "react-bootstrap"
+import NaicoTeam from "../../styles/images/naicoteam.jpg"
+import PersevereTeam from "../../styles/images/persevere_group_photo.jpg"
+import Naico from "../../styles/images/naico.jpg"
+import PersLogo from "../../styles/images/persLogo.png"
+import ReactGA from "react-ga"
+import HeaderNav from "../../components/HeaderNav"
+import ContactForm from "../../components/Form"
+import MainLayout from "../../components/Layout/MainLayout"
 export default class Partners extends Component {
   componentDidMount() {
-    window.scrollTo(0, 0);
-    ReactGA.initialize('UA-169087465-1')
-    ReactGA.pageview("/partners"); 
+    window.scrollTo(0, 0)
+    ReactGA.initialize("UA-169087465-1")
+    ReactGA.pageview("/partners")
   }
   render() {
     return (
-      <div
-        style={{
-          color: "white",
-          fontSize: "16px",
-          marginTop: "70px",
-        }}
-        className="lead"
-      >
-            <HeaderNav />
+      <MainLayout>
         <Row style={{ backgroundColor: "#24234d" }}>
           <Container className="text-center">
-            <h1 className="display-3 text-justify text-center p-4">Our Partners</h1>
+            <h1 className="display-3 text-justify text-center p-4">
+              Our Partners
+            </h1>
           </Container>
         </Row>
         <Row>
@@ -80,7 +75,7 @@ export default class Partners extends Component {
           </Container>
         </Row>
         <ContactForm />
-      </div>
-    );
+      </MainLayout>
+    )
   }
 }
