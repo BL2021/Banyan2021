@@ -4,17 +4,14 @@ require("dotenv").config({
 
 module.exports = {
   /* Your site config here */
-  siteMetadata : {
-    title: `Banyanlabs`,
-    description:
-    `Software Developers`,
+  siteMetadata: {
+    title: `Banyan Labs`,
+    description: `Software Developers`,
     url: `https://banyanyanlabs.io`,
-    author: `Banyanlabs`
-
+    author: `Banyan Labs`,
   },
-  plugins: [ 
-    
-      `gatsby-plugin-react-helmet`,
+  plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -29,6 +26,5 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
-    
-  ]
+  ],
 }
