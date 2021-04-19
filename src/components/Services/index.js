@@ -1,23 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Table } from "react-bootstrap";
-import "./style.css";
-import CheckIcon from "@material-ui/icons/Check";
-import ReactGA from 'react-ga';
-
-// import HeaderNav from "../HeaderNav";
+import React from "react"
+import { Container, Row, Table } from "react-bootstrap"
+import "./style.css"
+import CheckIcon from "@material-ui/icons/Check"
+import ReactGA from "react-ga"
 
 function Service(props) {
-
-    ReactGA.initialize('UA-169087465-1')
-
-  
-
+  ReactGA.initialize("UA-169087465-1")
   return (
     <div>
-
       <Row style={{ backgroundColor: "#24234d" }}>
         <Container className="text-center">
-          <h1 className="display-3 text-justify text-center p-4">{props.title}</h1>
+          <h1 className="display-3 text-justify text-center p-4">
+            {props.title}
+          </h1>
         </Container>
       </Row>
 
@@ -122,6 +117,6 @@ function Service(props) {
 
       <br />
     </div>
-  );
+  )
 }
-export default Service;
+export default Service

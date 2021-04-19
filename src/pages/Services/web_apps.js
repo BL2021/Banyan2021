@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Service from "../../components/Services"
 import "./serve.css"
 import Diagram2 from "../../styles/images/new_junt.jpg"
-import HeaderNav from "../../components/HeaderNav"
 import ContactForm from "../../components/Form"
 import MainLayout from "../../components/Layout/MainLayout"
 export class web_apps extends Component {

@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import TeamMemberExpanded from "../TeamMemberExpanded";
 import { Card, Row, CardDeck, Col } from "react-bootstrap";
 import { useStaticQuery, graphql } from "gatsby"

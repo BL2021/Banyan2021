@@ -1,10 +1,9 @@
-import React, { Component } from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
+import React from "react"
+
 import { Row, Container } from "react-bootstrap"
 import TeamMember2 from "../../components/TeamMember/TeamMember2"
 import { TEAMMEMBERS } from "../../data/teamMembers"
-import ReactGA from "react-ga"
-import HeaderNav from "../../components/HeaderNav"
+
 import ContactForm from "../../components/Form"
 import MainLayout from "../../components/Layout/MainLayout"
 

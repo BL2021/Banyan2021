@@ -5,7 +5,6 @@ import PersevereTeam from "../../styles/images/persevere_group_photo.jpg"
 import Naico from "../../styles/images/naico.jpg"
 import PersLogo from "../../styles/images/persLogo.png"
 import ReactGA from "react-ga"
-import HeaderNav from "../../components/HeaderNav"
 import ContactForm from "../../components/Form"
 import MainLayout from "../../components/Layout/MainLayout"
 export default class Partners extends Component {
