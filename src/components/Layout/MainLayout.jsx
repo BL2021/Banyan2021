@@ -1,6 +1,6 @@
 import React from "react"
 import HeaderNav from "../HeaderNav"
-import SEO from '../SEO'
+import SEO from '../seo'
 
 const pageContainer = {
   "marginTop": "70px",
