@@ -2,26 +2,28 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Table } from "react-bootstrap";
 import "./style.css";
 import { graphql, useStaticQuery } from 'gatsby';
+import { StaticImage } from "gatsby-plugin-image"
 
 import CheckIcon from "@material-ui/icons/Check";
 import ReactGA from 'react-ga';
-// import Img from 'gatsby-image';
+import Img from 'gatsby-image';
 // import HeaderNav from "../HeaderNav";
-
 function Service(props) {
 
     ReactGA.initialize('UA-169087465-1')
 
     const data = useStaticQuery(graphql`
     query {
-     file(relativePath: {eq: "alexM.jpg"}) {
-       childImageSharp {
-         fluid {
-           ...GatsbyImageSharpFluid
-           src
-         }
-       }
-     }
+      dataJson {
+        src {
+          childImageSharp {
+            fluid {
+              src
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
    }
        `)
 
@@ -40,11 +42,13 @@ function Service(props) {
       >
         {props.diagram && (
           <div className="row justify-content-center mt-4 mb-3">
-          <img
-              src={props.diagram}
+            {/* <Img
+              src={data.dataJson.src.childImageSharp.fluid.src}
               alt="img"
+             fluid={data.dataJson.src.childImageSharp.fluid}
               className="px-5 col-md-9 col-sm-12 mx-auto max-hw"
-            />
+            /> */}
+            <StaticImage src="../../styles/images/ourprocess.png" alt="our process" placeholder="blurred" />
           </div>
         )}
         {props.mobile && (
@@ -138,4 +142,3 @@ function Service(props) {
   );
 }
 export default Service;
-

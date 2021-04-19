@@ -34,6 +34,8 @@
     "gatsby-plugin-sass": "^3.0.0",
     "gatsby-plugin-sharp": "^3.3.0",
     "gatsby-source-contentful": "^4.4.0",
+    "gatsby-source-filesystem": "^3.3.0",
+    "gatsby-transformer-json": "^3.3.0",
     "gatsby-transformer-sharp": "^3.3.0",
     "google-map-react": "^1.1.7",
     "history": "^4.10.1",
