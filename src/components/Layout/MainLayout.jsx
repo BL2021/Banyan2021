@@ -7,12 +7,11 @@ const pageContainer = {
 }
 
 export default function MainLayout(props) {
-  const url = typeof window !== "undefined" ? window.location.pathname : ""
-
   return (
     <>
       <HeaderNav />
-      <SEO title={url} />
+      {/* todo pass in a title like /About */}
+      <SEO title="" />
       <div style={pageContainer}>{props.children}</div>
     </>
   )
