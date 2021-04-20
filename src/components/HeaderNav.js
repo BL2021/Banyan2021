@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { Navbar, Nav, NavDropdown, Image, Dropdown } from "react-bootstrap";
-import Logo from "../styles/images/Logo.png";
-import { Link } from "gatsby";
+import React, { useState } from "react"
+import { Navbar, Nav, NavDropdown, Image, Dropdown } from "react-bootstrap"
+import Logo from "../styles/images/Logo.png"
+import { Link } from "gatsby"
 
-
-const HeaderNav = (props) => {
-  const [isOpen, updateIsOpen] = useState(false);
-  const [isOpen2, updateIsOpen2] = useState(false);
-  const [expanded, setExpanded] = useState(false);
+const HeaderNav = props => {
+  const [isOpen, updateIsOpen] = useState(false)
+  const [isOpen2, updateIsOpen2] = useState(false)
+  const [expanded, setExpanded] = useState(false)
 
   return (
     <div>
@@ -18,9 +17,11 @@ const HeaderNav = (props) => {
         expand="lg"
         expanded={expanded}
       >
-        <Navbar.Brand href="/">
-          <Image className="logo" src={Logo} />
-        </Navbar.Brand>
+        <Link to="/">
+          <Navbar.Brand>
+            <Image className="logo" src={Logo} />
+          </Navbar.Brand>
+        </Link>
         <Navbar.Toggle
           onClick={() => setExpanded(expanded ? false : "expanded")}
           aria-controls="responsive-navbar-nav"
@@ -43,8 +44,8 @@ const HeaderNav = (props) => {
             >
               <NavDropdown.Item
                 onClick={() => {
-                  setExpanded(false);
-                  updateIsOpen2(false);
+                  setExpanded(false)
+                  updateIsOpen2(false)
                 }}
                 as={Link}
                 to="/About"
@@ -53,8 +54,8 @@ const HeaderNav = (props) => {
               </NavDropdown.Item>
               <NavDropdown.Item
                 onClick={() => {
-                  setExpanded(false);
-                  updateIsOpen2(false);
+                  setExpanded(false)
+                  updateIsOpen2(false)
                 }}
                 as={Link}
                 to="/Mission"
@@ -63,8 +64,8 @@ const HeaderNav = (props) => {
               </NavDropdown.Item>
               <NavDropdown.Item
                 onClick={() => {
-                  setExpanded(false);
-                  updateIsOpen2(false);
+                  setExpanded(false)
+                  updateIsOpen2(false)
                 }}
                 as={Link}
                 to="/Team"
@@ -73,8 +74,8 @@ const HeaderNav = (props) => {
               </NavDropdown.Item>
               <NavDropdown.Item
                 onClick={() => {
-                  setExpanded(false);
-                  updateIsOpen2(false);
+                  setExpanded(false)
+                  updateIsOpen2(false)
                 }}
                 as={Link}
                 to="/Partners"
@@ -94,8 +95,8 @@ const HeaderNav = (props) => {
             >
               <Dropdown.Item
                 onClick={() => {
-                  setExpanded(false);
-                  updateIsOpen(false);
+                  setExpanded(false)
+                  updateIsOpen(false)
                 }}
                 as={Link}
                 to="/Services/our_process"
@@ -104,8 +105,8 @@ const HeaderNav = (props) => {
               </Dropdown.Item>
               <Dropdown.Item
                 onClick={() => {
-                  setExpanded(false);
-                  updateIsOpen(false);
+                  setExpanded(false)
+                  updateIsOpen(false)
                 }}
                 as={Link}
                 to="/Services/web_apps"
@@ -114,15 +115,14 @@ const HeaderNav = (props) => {
               </Dropdown.Item>
               <Dropdown.Item
                 onClick={() => {
-                  setExpanded(false);
-                  updateIsOpen(false);
+                  setExpanded(false)
+                  updateIsOpen(false)
                 }}
                 as={Link}
                 to="/Services/mobile_apps"
               >
                 Mobile Apps
               </Dropdown.Item>
-              
             </NavDropdown>
             <Nav.Link
               className="mx-2 mr-lg-5"
@@ -135,6 +135,6 @@ const HeaderNav = (props) => {
         </Navbar.Collapse>
       </Navbar>
     </div>
-  );
-};
-export default HeaderNav;
+  )
+}
+export default HeaderNav

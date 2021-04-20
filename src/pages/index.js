@@ -1,25 +1,22 @@
-import React, { Component } from "react";
-import Carousel from "../components/Carousel";
-import WhatWeDo from "../components/WhatWeDo";
-import WhoWeAre from "../components/WhoWeAre";
-import Information from "../components/Information";
-import HeaderNav from "../components/HeaderNav";
-import ContactForm from "../components/Form" 
-import ReactGA from 'react-ga';
-import SEO from "../components/seo";
+import React, { Component } from "react"
+import Carousel from "../components/Carousel"
+import WhatWeDo from "../components/WhatWeDo"
+import WhoWeAre from "../components/WhoWeAre"
+import Information from "../components/Information"
+import ContactForm from "../components/Form"
+import ReactGA from "react-ga"
+import MainLayout from "../components/Layout/MainLayout"
 
 export default class Home extends Component {
   componentDidMount() {
-    window.scrollTo(0, 0);
-    ReactGA.initialize('UA-169087465-1')
-    ReactGA.pageview("/"); 
+    window.scrollTo(0, 0)
+    ReactGA.initialize("UA-169087465-1")
+    ReactGA.pageview("/")
   }
 
   render() {
     return (
-      <div className="container-fluid n-p p-0">
-    <SEO />
-    <HeaderNav />
+      <MainLayout>
         <Carousel />
         <div className="container-fluid n-p p-0">
           <WhoWeAre />
@@ -29,7 +26,7 @@ export default class Home extends Component {
           <Information />
         </div>
         <ContactForm />
-      </div>
-    );
+      </MainLayout>
+    )
   }
 }
