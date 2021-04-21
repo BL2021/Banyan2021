@@ -6,26 +6,10 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import CheckIcon from "@material-ui/icons/Check";
 import ReactGA from 'react-ga';
-import Img from 'gatsby-image';
 // import HeaderNav from "../HeaderNav";
 function Service(props) {
 
     ReactGA.initialize('UA-169087465-1')
-
-    const data = useStaticQuery(graphql`
-    query {
-      dataJson {
-        src {
-          childImageSharp {
-            fluid {
-              src
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-   }
-       `)
 
   return (
     <div>
@@ -46,9 +30,9 @@ function Service(props) {
               src={data.dataJson.src.childImageSharp.fluid.src}
               alt="img"
              fluid={data.dataJson.src.childImageSharp.fluid}
-              className="px-5 col-md-9 col-sm-12 mx-auto max-hw"
+             
             /> */}
-            <StaticImage src="../../styles/images/ourprocess.png" alt="our process" placeholder="blurred" />
+            <StaticImage src="../../styles/images/ourprocess.png" alt="our process" placeholder="blurred"  className="px-5 col-md-9 col-sm-12 mx-auto max-hw" />
           </div>
         )}
         {props.mobile && (
