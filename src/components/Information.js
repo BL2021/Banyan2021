@@ -14,7 +14,7 @@ export default function Information() {
               href="https://www.google.com/maps/place/Banyan+Labs/@35.0362499,-89.8920789,17z/data=!3m1!4b1!4m5!3m4!1s0x887f8ffd2380ba8b:0xf2380f8aabf9161b!8m2!3d35.0362499!4d-89.8898849"
               rel="noopener noreferrer"
             >
-              4147 Willow Lake Blvd. Memphis, TN 38118
+              4163 Willow Lake Blvd. Memphis, TN 38118
             </a>
           </h2>
           <h2 className="text-light contact_attributes">
