@@ -1,8 +1,10 @@
 .cardImage {
   height: auto;
-  max-height: 200px;
-  width: auto;
-  max-width: 200px;
+  max-height: 179px;
+  min-height: 200px;
+  
+ 
+
 }
 
 
@@ -22,7 +24,7 @@
     height: auto;
     max-height: 266px;
     width: auto;
-    max-width: 500px;
+    max-width: 250px;
   }
 }
 
@@ -30,10 +32,10 @@
   
 
 
-  height: auto;
-  max-height: 300px;
-  width: auto;
-  max-width: 250px;
+  height: 350px;
+  max-height: fit-content;
+  
+  max-width: auto;
 
 
 
