@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import TeamMemberExpanded from "../TeamMemberExpanded";
-import { Card, Row, CardDeck, Col } from "react-bootstrap";
+import React, { useState } from "react"
+import TeamMemberExpanded from "../TeamMemberExpanded"
+import { Card, Row, CardDeck, Col } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
-import "./styles.css";
-const TeamMember2 = (props) => {
+import "./styles.css"
+const TeamMember2 = props => {
+  const [selectedMember, setMember] = useState(null)
+  const [show, setShow] = useState(false)
 
-  const [selectedMember, setMember] = useState(null);
-  const [show, setShow] = useState(false);
-
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
       allContentfulTheTeam {
         edges {
@@ -21,52 +20,55 @@ const TeamMember2 = (props) => {
                 src
               }
             }
-              title
-              name
-            }
+            title
+            name
           }
         }
       }
-    `)
-   const learnMore = (member) => {
+    }
+  `)
+  const learnMore = member => {
     setMember(member)
-    console.log(selectedMember);
-    return selectedMember;
+    console.log(selectedMember)
+    return selectedMember
   }
-  const handleClose = () =>  {
+  const handleClose = () => {
     setShow(false)
   }
- const handleShow = () =>  {
+  const handleShow = () => {
     setShow(true)
   }
 
-// FUNCTION TO SORT DEVELOPERS TO STAY AT THE TOP OF THE PAGE, WHILE ADMIN STAFF IS AT THE BOTTOM
+  // FUNCTION TO SORT DEVELOPERS TO STAY AT THE TOP OF THE PAGE, WHILE ADMIN STAFF IS AT THE BOTTOM
 
-  function sortEmployees(data){
+  // I dont think that were using this section(sortEmployees function)?
+  function sortEmployees(data) {
     let employees = data.allContentfulTheTeam.edges
 
     return employees.sort(employee => {
-      if(employee.node.title === "Developer"){
+      if (employee.node.title === "Developer") {
         return -1
-      }else {
+      } else {
         return 1
       }
     })
   }
   sortEmployees(data)
-  
-  const members = data.allContentfulTheTeam.edges.map((member) => {
+
+  const members = data.allContentfulTheTeam.edges.map(member => {
     return (
-      <Col sm={12} md={6} lg={3} key={member.id}>
+      <Col className="col_width" sm={12} md={6} lg={3} key={member.id}>
         <Card
           className="m-2"
           onClick={() => {
-            learnMore(member);
-            handleShow();
+            learnMore(member)
+            handleShow()
           }}
           style={{ cursor: "pointer" }}
         >
-        <Card.Body style={{ border: "#24234d solid 3px", textAlign: "center", }}>
+          <Card.Body
+            style={{ border: "#24234d solid 3px", textAlign: "center" }}
+          >
             <Card.Img
               variant="top"
               src={member.node.photo.fixed.src}
@@ -84,11 +86,12 @@ const TeamMember2 = (props) => {
           </Card.Body>
         </Card>
       </Col>
-    );
-  });
+    )
+  })
+
   return (
     <div className="container">
-      <Row className="mb-2">
+      <Row className="mb-2 center_card">
         <CardDeck>{members}</CardDeck>
         <TeamMemberExpanded
           member={selectedMember}
@@ -97,6 +100,6 @@ const TeamMember2 = (props) => {
         />
       </Row>
     </div>
-  );
-  }
-  export default TeamMember2;
+  )
+}
+export default TeamMember2
