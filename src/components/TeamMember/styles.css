@@ -1,3 +1,13 @@
+.center_card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-deck{
+  justify-content: center;
+}
+
 .cardImage {
   height: auto;
   max-height: 200px;
@@ -5,36 +15,32 @@
   max-width: 200px;
 }
 
-
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 767.98px) {
+/* Medium devices (tablets, 1199px and up) */
+@media (max-width: 1199px) {
   .cardImage {
     height: auto;
-    max-height: 266px;
-    width: auto;
-    max-width: 251px;
-  }
-}
+    max-height: 215px;
+    width: 180px;
 
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 991.98px) {
-  .cardImage {
-    height: auto;
-    max-height: 266px;
-    width: auto;
-    max-width: 500px;
   }
+
+  .center_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col_width{
+    min-width: 225px;
+    max-width: 250px;
+  }  
 }
 
 .card{
-  
-
-
   height: auto;
+  min-height: 300px;
   max-height: 300px;
   width: auto;
-  max-width: 250px;
-
-
-
+  min-width: 225px;
+  max-width: 250px; 
 }
