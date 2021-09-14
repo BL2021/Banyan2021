@@ -7,12 +7,15 @@ const pageContainer = {
   marginTop: "70px",
 }
 
+const isBrowser = typeof window !== "undefined"
+
+
 export default function MainLayout(props) {
   return (
     <>
       <HeaderNav />
       <Helmet>
-        <script>
+        {isBrowser ? (<><script>
         {`!function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -26,7 +29,7 @@ export default function MainLayout(props) {
         </script>
         <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=541431673636831&ev=PageView&noscript=1"
-        /></noscript>
+        /></noscript></>):null}
       </Helmet>
       {/* todo pass in a title like /About */}
       <SEO title="" />
