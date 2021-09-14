@@ -32,7 +32,8 @@ export default function MainLayout(props) {
               <img
                 height="1"
                 width="1"
-                style="display:none"
+                style={{ display: "none" }}
+                alt=""
                 src="https://www.facebook.com/tr?id=541431673636831&ev=PageView&noscript=1"
               />
             </noscript>
@@ -40,16 +41,12 @@ export default function MainLayout(props) {
               async
               src="https://www.googletagmanager.com/gtag/js?id=G-J572KCKESH"
             ></script>
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-  window.dataLayer = window.dataLayer || [];
+            <script>
+              {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-J572KCKESH');
-  `,
-              }}
-            />
+  gtag('config', 'G-J572KCKESH');`}
+            </script>
           </>
         ) : null}
       </Helmet>
