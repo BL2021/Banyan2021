@@ -40,16 +40,12 @@ export default function MainLayout(props) {
               async
               src="https://www.googletagmanager.com/gtag/js?id=G-J572KCKESH"
             ></script>
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-  window.dataLayer = window.dataLayer || [];
+            <script>
+              {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-J572KCKESH');
-  `,
-              }}
-            />
+  gtag('config', 'G-J572KCKESH');`}
+            </script>
           </>
         ) : null}
       </Helmet>
