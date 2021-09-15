@@ -25,69 +25,72 @@ function SEO({ description, lang, meta, title }) {
 
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={defaultTitle}
-      titleTemplate={formattedTitle ? `%s | ${formattedTitle}` : defaultTitle}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    >
-      {isBrowser ? (
-        <>
+    <>
+      <Helmet
+        htmlAttributes={{
+          lang,
+        }}
+        title={defaultTitle}
+        titleTemplate={formattedTitle ? `%s | ${formattedTitle}` : defaultTitle}
+        meta={[
+          {
+            name: `description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:title`,
+            content: title,
+          },
+          {
+            property: `og:description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:type`,
+            content: `website`,
+          },
+          {
+            name: `twitter:card`,
+            content: `summary`,
+          },
+          {
+            name: `twitter:creator`,
+            content: site.siteMetadata?.author || ``,
+          },
+          {
+            name: `twitter:title`,
+            content: title,
+          },
+          {
+            name: `twitter:description`,
+            content: metaDescription,
+          },
+        ].concat(meta)}
+      />
+
+      {isBrowser && (
+        <Helmet>
           <script>
             {`!function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '541431673636831');
-        fbq('track', 'PageView');`}
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '541431673636831');
+              fbq('track', 'PageView');`}
           </script>
           <noscript>
+            {`
             <img
               height="1"
               width="1"
               style={{ display: "none" }}
               alt=""
               src="https://www.facebook.com/tr?id=541431673636831&ev=PageView&noscript=1"
-            />
+            />`}
           </noscript>
           <script
             async
@@ -95,13 +98,16 @@ function SEO({ description, lang, meta, title }) {
           ></script>
           <script>
             {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-J572KCKESH');`}
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J572KCKESH');`}
           </script>
-        </>
-      ) : null}
-    </Helmet>
+        </Helmet>
+      )}
+
+
+
+    </>
   )
 }
 
