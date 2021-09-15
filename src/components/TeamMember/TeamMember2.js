@@ -57,7 +57,7 @@ const TeamMember2 = props => {
 
   const members = data.allContentfulTheTeam.edges.map(member => {
     return (
-      <Col className="col_width" sm={12} md={6} lg={3} key={member.id}>
+      <Col className="col_width" sm={12} md={6} lg={3} key={member.node.name}>
         <Card
           className="m-2"
           onClick={() => {
