@@ -29,7 +29,7 @@ export default function MainLayout(props) {
         </script>
         <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=541431673636831&ev=PageView&noscript=1"
-        /></noscript></>):null}
+        /></noscript></>):null }
       </Helmet>
       {/* todo pass in a title like /About */}
       <SEO title="" />
