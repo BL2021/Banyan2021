@@ -69,6 +69,7 @@ function SEO({ description, lang, meta, title }) {
       {isBrowser ? (
       <>
       {/* Facebook Pixel Code */}
+      <meta name="facebook-domain-verification" content="0a9iezoqu1pt6yktd2bi7xg32tpvp3" />
       <script>
         {`!function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
