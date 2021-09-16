@@ -87,6 +87,15 @@ function SEO({ description, lang, meta, title }) {
           src="https://www.facebook.com/tr?id=541431673636831&ev=PageView&noscript=1"
         />
       </noscript>
+
+      {/* Google Analytics */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-J572KCKESH"></script>
+      <script>
+      {`  window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J572KCKESH');`}
+      </script>
       </>) : null}
     </Helmet>
   )
